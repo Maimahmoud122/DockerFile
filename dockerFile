@@ -1,0 +1,8 @@
+FROM python 
+COPY . /Test
+RUN pip install -r /Test/requirements.txt
+WORKDIR /Test 
+CMD python python.py
+#to build the docker image write docker build -t my-image -f dockerFile
+#in the terminal 
+#and to run the image write docker run my-image
